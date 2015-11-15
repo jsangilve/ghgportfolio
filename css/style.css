@@ -29,6 +29,7 @@ a { color: #FFF; text-decoration: none }
 a:hover { 
  color: #fff;
  text-decoration: none;
+ padding-bottom: 2px;
  border-bottom: 2px solid #fff;
 }
 
@@ -49,6 +50,7 @@ a:hover {
 .navbar nav li { 
   float:left;
   margin-left: 1.5em;
+  line-height: 2rem;
 }
 
 
