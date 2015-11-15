@@ -27,6 +27,7 @@ a {
 }
 a:hover { 
   color: #fff; 
+  text-decoration: underline;
 }
 
 .button { 
@@ -43,6 +44,7 @@ a:hover {
 .button:hover {
   color: #BBD1D7;
   background: #73725f;
+  text-decoration: none;
 }
 
 p { margin: 0;}
@@ -69,11 +71,16 @@ p { margin: 0;}
   float:left;
   margin-left: 1.5em;
 }
-nav a {color: #73725f;}
+nav a {
+  color: #73725f;
+  line-height: 1.2rem;
+}
 nav a:hover {
   color: #73725f;
   box-sizing: border-box;
   border-bottom: 2px solid #73725f;
+  text-decoration: none;
+  overflow: hidden;
 }
 
 /* Sections */
