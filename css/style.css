@@ -27,8 +27,6 @@ a {
 }
 a:hover { 
   color: #fff; 
-  text-decoration: none;
-  border-bottom: 2px solid #fff;
 }
 
 .button { 
@@ -45,7 +43,6 @@ a:hover {
 .button:hover {
   color: #BBD1D7;
   background: #73725f;
-  border: 2px solid #73725f;
 }
 
 p { margin: 0;}
@@ -71,11 +68,11 @@ p { margin: 0;}
 .navbar nav li { 
   float:left;
   margin-left: 1.5em;
-  line-height: 1.7rem;
 }
 nav a {color: #73725f;}
 nav a:hover {
   color: #73725f;
+  box-sizing: border-box;
   border-bottom: 2px solid #73725f;
 }
 
