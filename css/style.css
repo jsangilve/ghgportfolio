@@ -42,7 +42,7 @@ a:hover {
   letter-spacing: 0.4rem;
 }
 .button:hover {
-  color: #BBD1D7;
+  color: #bbd1d7;
   background: #73725f;
   text-decoration: none;
 }
@@ -50,7 +50,7 @@ a:hover {
 p { margin: 0;}
 
 .container {
-  background: #BBD1D7;
+  background: #bbd1d7;
   padding: 3.5rem;
 }
 
@@ -67,18 +67,21 @@ p { margin: 0;}
   display: block;
   float: right;
 }
-.navbar nav li { 
+nav li { 
+  display: inline-block;
+  box-sizing: border-box;
   float:left;
   margin-left: 1.5em;
+  border-bottom: 2px solid #bbd1d7;
+}
+nav li:hover {
+  border-bottom: 2px solid #73725f;
 }
 nav a {
   color: #73725f;
-  line-height: 1.2rem;
 }
 nav a:hover {
   color: #73725f;
-  box-sizing: border-box;
-  border-bottom: 2px solid #73725f;
   text-decoration: none;
   overflow: hidden;
 }
