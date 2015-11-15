@@ -86,15 +86,17 @@ section aside { width: 45%;}
 aside { 
   font-family: 'Fira Mono', sans-serif;
   color: #fff;
+  box-sizing: border-box;
   border-bottom: 2px solid #fff;
   height: 27rem;
+  letter-spacing: 0.15rem;
 }
 aside.right { float:right;}
-aside ul { padding: 0;}
+aside ul { padding: 0; line-height: 1.5rem;}
 aside ul.tags { 
   font-size: 0.9rem;
 }
-.right ul.tags {text-align: right;}
 aside ul.description {
   font-size: 1.1rem;
 }
+.text-right {text-align: right;}
