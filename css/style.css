@@ -30,6 +30,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Buttons */
+.button-container {
+  margin-top: 3rem;
+  width: 70%;
+}
 .button { 
   background: none;
   border: 2px solid #73725f;
@@ -89,27 +94,27 @@ nav a:hover {
 /* Sections */
 .box-right {float:right; margin-right: 3.5rem;}
 .box-left {float:left; margin-left: 3.5rem}
-section p { color: #fff; font-size: 1.8em; }
-section article { 
-  width: 70%; 
-  clear: both;
-  margin-bottom: 6rem;
-}
-section article:last-child {
-  margin-top: -3rem;
-}
+section p { color: #fff; font-size: 1.8em; width: 70%; }
 section {
   margin: 5.5rem 0;
+  clear: both;
+}
+section:after {
+  display:block;
+  content: ' ';
   clear: both;
 }
 section h2 { 
   font-size: 3rem;
   margin: 0.8rem 0 0 -3.5rem;
 }
-article.project { 
+section article.project { 
+  width: 70%; 
+  clear: both;
   border-top: 4px solid #fff; 
   height: 33rem;
   box-sizing: border-box;
+  margin-bottom: 6rem;
 }
 h2.right {text-align: right; margin-right: -3.5rem;}
 
@@ -120,7 +125,7 @@ article.project2 { background: url(../images/750x600.jpg) no-repeat right 3rem;}
 /* Article content */
 section aside { width: 45%;}
 article .title-right { margin-right: -3.5rem; text-align: right;}
-aside { 
+article.project aside { 
   font-family: 'Fira Mono', sans-serif;
   color: #fff;
   box-sizing: border-box;
@@ -166,7 +171,110 @@ aside a.view-right:hover {
   background: url(../images/view_hover.png) no-repeat left center;
 }
 
-/* Buttons */
-section .button-container {
-  width: 70%;
+
+/* Resume */
+section article.resume {
+  overflow: auto;
+  margin-bottom: 2em;
+}
+.resume h3 { 
+  font-weight: 400;
+  border-bottom: 2px solid #fff;
+  margin: 1rem 3.5rem;
+}
+.resume .item, .resume h3 {
+ color: #fff;  
+ font-family: 'Fira Mono', 'sans-serif';
+ letter-spacing: 0.15rem;
+}
+.resume ul { width: 70%; padding-left: 0;}
+.resume li:last-child {
+  margin-bottom: 0;
+}
+.resume .right {
+  display: inline-block;
+  float:right;
+}
+.resume .right {
+  display: inline-block;
+}
+.resume .item { 
+ margin-bottom: 0.5rem;
+}
+.resume .description { 
+ color: #73725f;
+ letter-spacing: 0.1rem;
+ margin-bottom: 2.5rem;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-right: 3.5rem;
+}
+.contact-info aside {
+  float: left;
+  width: 45%;
+}
+.contact-info aside p {
+  color: #73725f;
+  font-size: 1rem;
+  padding-left: 3.5rem;
+  line-height: 2rem;
+  width: 40%;
+}
+.contact-info .form-container {
+  color: #fff;
+  float: left;
+  width: 55%;
+  border-top: 2px solid #fff;
+}
+.form-container input, .form-container textarea { 
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Fira Mono', 'sans-serif';
+  background: #bbd1d7;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+.form-container input {
+  line-height: 4rem;
+}
+.form-container textarea {
+  line-height: 2rem;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color:    #fff;
+ opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #fff;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:    #fff;
+}
+.form-container input:focus, .form-container textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #73725f;
+}
+.contact-info input, .contact-info textarea { width: 100%;}
+
+.form-submit {
+  line-height: 3rem;
+  border-bottom: 2px solid #fff;
+  letter-spacing: 0.15rem;
+  text-align: right;
+}
+.form-submit img { vertical-align: middle;}
+.form-submit a {
+  color: #73725f;
+}
+
+/* Remove margin from last articles*/
+section article.last {
+  margin-bottom: 0;
 }
