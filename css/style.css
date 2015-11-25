@@ -92,8 +92,7 @@ nav a:hover {
 }
 
 /* Sections */
-.box-right {float:right; margin-right: 3.5rem;}
-.box-left {float:left; margin-left: 3.5rem}
+
 section p { color: #fff; font-size: 1.8em; width: 70%; }
 section {
   margin: 5.5rem 0;
@@ -157,18 +156,38 @@ aside a.view:hover {
   text-decoration: none;
   border-bottom: 2px solid #73725f;
 }
-aside a.view-left{
+.view-left{
   background: url(../images/view.png) no-repeat right center;
 }
-aside a.view-right {
+.view-right {
   background: url(../images/view.png) no-repeat left center;
   text-align: right;
 }
-aside a.view-left:hover {
+.view-left:hover {
   background: url(../images/view_hover.png) no-repeat right center;
 }
-aside a.view-right:hover {
+.view-right:hover {
   background: url(../images/view_hover.png) no-repeat left center;
+}
+.box-right {float:right; margin-right: 3.5rem;}
+.box-right h2 { margin-right: -3.5rem; text-align: right;}
+.box-right .description { text-align: right; }
+.box-right .view {
+  background: url(../images/view.png) no-repeat left center;
+  text-align: right;
+}
+.box-right .view:hover {
+  background: url(../images/view_hover.png) no-repeat left center;
+}
+
+.box-left { float:left; margin-left: 3.5rem; }
+.box-left aside { float:right;}
+.box-left .tags { text-align: right;}
+.box-left .view {
+  background: url(../images/view.png) no-repeat right center;
+}
+.box-left .view:hover {
+  background: url(../images/view_hover.png) no-repeat right center;
 }
 
 
@@ -194,9 +213,6 @@ section article.resume {
 .resume .right {
   display: inline-block;
   float:right;
-}
-.resume .right {
-  display: inline-block;
 }
 .resume .item { 
  margin-bottom: 0.5rem;
@@ -300,4 +316,3 @@ section article.resume {
 section article.last, section.last {
   margin-bottom: 0;
 }
-
