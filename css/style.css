@@ -56,7 +56,7 @@ p { margin: 0;}
 
 .container {
   background: #bbd1d7;
-  padding: 3.5rem;
+  padding: 7.5rem;
 }
 
 /* Navigation bar styles */
@@ -264,17 +264,40 @@ section article.resume {
 .contact-info input, .contact-info textarea { width: 100%;}
 
 .form-submit {
-  line-height: 3rem;
   border-bottom: 2px solid #fff;
   letter-spacing: 0.15rem;
   text-align: right;
 }
-.form-submit img { vertical-align: middle;}
+.send {
+  background: url(../images/send.png) no-repeat center right;
+}
+.send:hover {
+  background: url(../images/send_hover.png) no-repeat center right;
+}
 .form-submit a {
+  display: inline-block;
+  color: #fff;
+  line-height: 4rem;
+  padding-right: 3rem;
+  text-decoration: none;
+}
+.form-submit a:hover {
   color: #73725f;
+}
+.back-to-top {
+  background: url(../images/back_to_top.png) no-repeat center;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 4.5rem;
+  bottom: 4.5rem;
+}
+.back-to-top:hover {
+  background: url(../images/back_to_top_hover.png) no-repeat center;
 }
 
 /* Remove margin from last articles*/
-section article.last {
+section article.last, section.last {
   margin-bottom: 0;
 }
+
