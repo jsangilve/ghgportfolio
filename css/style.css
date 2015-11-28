@@ -20,6 +20,7 @@ ul {
 .text-right {text-align: right;}
 .push-right { float:right;}
 .push-left { float:left;}
+.green { color: #73725f; }
 
 a { 
   text-decoration: none;
@@ -55,8 +56,10 @@ a:hover {
 p { margin: 0;}
 
 .container {
-  background: #bbd1d7;
   padding: 7.5rem;
+}
+.container-blue {
+  background: #bbd1d7;
 }
 
 /* Navigation bar styles */
@@ -156,22 +159,9 @@ aside a.view:hover {
   text-decoration: none;
   border-bottom: 2px solid #73725f;
 }
-.view-left{
-  background: url(../images/view.png) no-repeat right center;
-}
-.view-right {
-  background: url(../images/view.png) no-repeat left center;
-  text-align: right;
-}
-.view-left:hover {
-  background: url(../images/view_hover.png) no-repeat right center;
-}
-.view-right:hover {
-  background: url(../images/view_hover.png) no-repeat left center;
-}
 .box-right {float:right; margin-right: 3.5rem;}
 .box-right h2 { margin-right: -3.5rem; text-align: right;}
-.box-right .description { text-align: right; }
+.box-right ul.description { text-align: right; }
 .box-right .view {
   background: url(../images/view.png) no-repeat left center;
   text-align: right;
@@ -209,6 +199,8 @@ section article.resume {
 .resume ul { width: 70%; padding-left: 0;}
 .resume li:last-child {
   margin-bottom: 0;
+}
+.resume .left {
 }
 .resume .right {
   display: inline-block;
@@ -315,4 +307,31 @@ section article.resume {
 /* Remove margin from last articles*/
 section article.last, section.last {
   margin-bottom: 0;
+}
+
+/** Project page **/
+section.project {
+  margin: 2rem;
+}
+.project-img {
+  text-align: center;
+  margin: 2em 0;
+}
+.project-top-img img {
+  width: 100%;
+}
+.project-info h1 {
+  font-size: 3rem;
+}
+.project-info .tags, .project-info .subtitle {
+  font-family: 'Fira Mono', sans-serif;
+  margin-bottom: 0.5rem;
+}
+.project-info .tags a:hover {
+  color: #73725f;
+}
+.project-info p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 2rem 0 2rem 3.5rem;
 }
