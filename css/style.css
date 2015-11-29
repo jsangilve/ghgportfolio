@@ -17,10 +17,17 @@ ul {
   margin: 0;
   list-style-type: none;
 }
+.text-center {text-align: center;}
 .text-right {text-align: right;}
 .push-right { float:right;}
 .push-left { float:left;}
 .green { color: #73725f; }
+.no-top-padding { padding-top: 0; }
+.no-bottom-padding { padding-bottom: 0; }
+.last {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 a { 
   text-decoration: none;
@@ -64,13 +71,19 @@ p { margin: 0;}
 
 /* Navigation bar styles */
 .navbar { 
-  color: #73725f; 
   font-family: 'Fira Mono', sans-serif;
   overflow: auto;
   margin-bottom: 2em; 
   letter-spacing: 0.20em;
 }
 .navbar .logo { float: left;}
+.navbar .logo a {
+  color: #73725f; 
+}
+.navbar .logo a:hover {
+  border-bottom: 2px solid #73725f;
+  text-decoration: none;
+}
 .navbar nav {
   display: block;
   float: right;
@@ -80,7 +93,7 @@ nav li {
   box-sizing: border-box;
   float:left;
   margin-left: 1.5em;
-  border-bottom: 2px solid #bbd1d7;
+  border-bottom: 2px solid #bbd1d7; /* Evita salto al ponerse sobre link*/
 }
 nav li:hover {
   border-bottom: 2px solid #73725f;
@@ -95,7 +108,6 @@ nav a:hover {
 }
 
 /* Sections */
-
 section p { color: #fff; font-size: 1.8em; width: 70%; }
 section {
   margin: 5.5rem 0;
@@ -126,7 +138,6 @@ article.project2 { background: url(../images/750x600.jpg) no-repeat right 3rem;}
 
 /* Article content */
 section aside { width: 45%;}
-article .title-right { margin-right: -3.5rem; text-align: right;}
 article.project aside { 
   font-family: 'Fira Mono', sans-serif;
   color: #fff;
@@ -293,23 +304,49 @@ section article.resume {
   color: #73725f;
 }
 .back-to-top {
+  display: inline-block;
   background: url(../images/back_to_top.png) no-repeat center;
-  position: fixed;
   width: 50px;
   height: 50px;
+}
+.back-to-top-right {
+  position: fixed;
   right: 4.5rem;
-  bottom: 4.5rem;
+  bottom: 7.5rem;
 }
 .back-to-top:hover {
   background: url(../images/back_to_top_hover.png) no-repeat center;
+  text-decoration: none;
 }
 
-/* Remove margin from last articles*/
-section article.last, section.last {
+/* Remove margin from last element*/
+section article.last, section.last, div.last {
   margin-bottom: 0;
 }
 
 /** Project page **/
+.container-project {
+  padding: 0 7.5rem;
+}
+.navbar-float {
+  position: absolute;
+  top: 2.5rem;
+  left: 5rem;
+  right: 5rem;
+}
+.navbar-float nav li {
+  border: none;
+}
+.navbar-float nav li:hover {
+  border-bottom: 2px solid #73725f;
+}
+.navbar-float a, .navbar-float .logo a {
+  color: #fff;
+}
+.navbar-float .logo a:hover {
+  color: #73725f;
+  text-decoration: none;
+}
 section.project {
   margin: 2rem;
 }
@@ -322,16 +359,66 @@ section.project {
 }
 .project-info h1 {
   font-size: 3rem;
+  margin-bottom: 1.5rem;
 }
 .project-info .tags, .project-info .subtitle {
   font-family: 'Fira Mono', sans-serif;
-  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 .project-info .tags a:hover {
   color: #73725f;
 }
 .project-info p {
-  font-size: 0.9rem;
-  line-height: 1.5rem;
-  margin: 2rem 0 2rem 3.5rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  margin: 3rem 0 2rem 3.5rem;
+}
+
+/* Project page footer */
+.project-footer {
+  color: #fff;
+  background: #bbd1d7;
+  padding: 2rem 7.5rem;
+  overflow: hidden;
+}
+.project-footer ul {
+  padding: 0;
+}
+.project-footer .previous, .project-footer .next {
+  margin: 2rem 0;
+}
+.project-footer .next {
+  text-align: right;
+}
+.project-footer .view-top a {
+  background: url(../images/view.png) no-repeat;
+  font-family: 'Fira Mono', sans-serif;
+  letter-spacing: 0.02rem;
+  padding-top: 2rem;
+}
+.project-footer .view-top a:hover {
+  background: url(../images/view_hover.png) no-repeat;
+  color: #73725f;
+}
+.project-footer .view-top a:hover {
+  color: #73725f;
+  text-decoration: none;
+}
+.project-footer .previous .view-top a {
+  background-position: top left;
+}
+.project-footer .next .view-top a {
+  background-position: top right;
+}
+.project-footer .title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0.5rem
+}
+.project-footer .project-links {
+  overflow: auto;
+}
+.project-footer .back-to-top-centered {
+  text-align: center;
 }
